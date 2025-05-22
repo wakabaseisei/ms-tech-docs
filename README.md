@@ -20,7 +20,7 @@ TBW
 | 分類      | 技術                                                                                                     | 補足                                  |
 | ------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------- |
 | インフラ    | AWS（EKS, ALB, CloudFront, Aurora MySQL Serverless v2, Lambda, Secrets Manager, S3, ECR, VPC Endpoints） | Terraformで管理                        |
-| IaC     | Terraform                                                                                              | IaC化（EKS、Aurora、ALB、CloudFrontなど） |
+| IaC     | Terraform                                                                                              ||
 | セキュリティ  | IAM, OIDC連携（GitHub Actions）, IRSA（IAM Roles for Service Accounts）                                      | Pod・CI単位のアクセス制御を実現                  |
 | CI/CD   | GitHub Actions, ArgoCD                                                                                 | ECRプッシュ、K8sリソース自動反映                 |
 | コンテナ基盤  | Kubernetes（EKS）                                                                                        | ArgoCDによるGitOps運用、Helmで導入           |
