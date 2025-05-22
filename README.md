@@ -84,4 +84,3 @@ TBW
 ## 📄 備考
 
 - フロントエンドとBFFはCORS対応済み
-- API設計はGoogle AIPをベースに整備
