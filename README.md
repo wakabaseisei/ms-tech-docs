@@ -16,6 +16,21 @@
 ### マイクロサービス構成図
 TBW
 
+### 使用技術
+| 分類      | 技術                                                                                                     | 補足                                  |
+| ------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------- |
+| インフラ    | AWS（EKS, ALB, CloudFront, Aurora MySQL Serverless v2, Lambda, Secrets Manager, S3, ECR, VPC Endpoints） | Terraformで管理                        |
+| IaC     | Terraform                                                                                              | IaC化（EKS、Aurora、ALB、CloudFrontなど） |
+| セキュリティ  | IAM, OIDC連携（GitHub Actions）, IRSA（IAM Roles for Service Accounts）                                      | Pod・CI単位のアクセス制御を実現                  |
+| CI/CD   | GitHub Actions, ArgoCD                                                                                 | ECRプッシュ、K8sリソース自動反映                 |
+| コンテナ基盤  | Kubernetes（EKS）                                                                                        | ArgoCDによるGitOps運用、Helmで導入           |
+| 通信プロトコル | Connect                                                                                                | Protobufベースの高速・型安全な通信               |
+| API定義   | Protobuf（Buf）                                                                                          | `ms-protobuf`リポジトリで一元管理             |
+| フロントエンド | React（SPA）                                                                                             | S3 + CloudFrontでホスティング              |
+| バックエンド  | Go                                                                                                     | BFF・マイクロサービスともにGo製                  |
+| データベース  | Aurora MySQL Serverless v2                                                                             | IAM認証、Secrets Managerでパスワード管理       |
+
+
 ---
 
 ## 📂 リポジトリ構成
